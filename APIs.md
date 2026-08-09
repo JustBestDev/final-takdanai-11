@@ -20,7 +20,7 @@
 | 11  | GET                | `/health-records/:id`        | ดูบันทึกสุขภาพเฉพาะ               | User   | 10     |
 | 12  | PUT                | `/health-records/:id`        | แก้ไขบันทึกสุขภาพ                 | User   | 10     |
 | 13  | DELETE             | `/health-records/:id`        | ลบบันทึกสุขภาพ                    | User   | 10     |
-|     | **Doctor Notes Bonus**   |                              |                                   |        |        |
+|     | **Doctor Notes Bonus!!!**   |                              |                                   |        |        |
 | 14  | POST               | `/doctor-notes`              | สร้างบันทึกให้ผู้ป่วย             | Doctor | 10     |
 | 15  | GET                | `/doctor-notes/my-notes`     | ดูบันทึกที่เขียนทั้งหมด           | Doctor | 10     |
 | 16  | GET                | `/doctor-notes/user/:userId` | ดูบันทึกที่เขียนให้ผู้ป่วยคนหนึ่ง | Doctor | 10     |
