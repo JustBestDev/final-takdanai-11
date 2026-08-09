@@ -56,7 +56,7 @@
 - **3 คะแนน** - Validate Input (username, password)
 - **0 คะแนน** - Authentication (ไม่ต้องใช้ token เพราะเป็น public endpoint)
 
-#### User Management & Doctor Management (50 คะแนน)
+#### User Management & Doctor Management (40 คะแนน)
 
 **5. GET /users/me (10 คะแนน)**
 
