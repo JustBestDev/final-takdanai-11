@@ -1,0 +1,82 @@
+@base_url = http://localhost:8899
+
+@userToken = {{userLogin.response.body.token}}
+@doctorToken = {{doctorLogin.response.body.token}}
+
+### doctor register
+POST  {{base_url}}/auth/register/doctor
+Content-Type: application/json
+
+{
+  "username": "doctor2",
+  "password": "123456",
+  "specialization": "ผ่าตัด"
+}
+
+### user register
+POST  {{base_url}}/auth/register/user
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "123456"
+}
+
+### doctor login
+# @name doctorLogin
+POST  {{base_url}}/auth/login/doctor
+Content-Type: application/json
+
+{
+  "username": "doctor2",
+  "password": "123456"
+}
+
+### user login
+# @name userLogin
+POST  {{base_url}}/auth/login/user
+Content-Type: application/json
+
+{
+  "username": "user1",
+  "password": "123456"
+}
+
+### Get me user
+GET  {{base_url}}/users/me
+Authorization: Bearer {{userToken}}
+
+### Get me doctor
+GET  {{base_url}}/doctors/me
+Authorization: Bearer {{doctorToken}}
+
+### Put me user
+PUT   {{base_url}}/users/me
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+    "username":"bestUser2",
+    "password":"123456"
+}
+
+### Put me doctor
+PUT   {{base_url}}/doctors/me
+Content-Type: application/json
+Authorization: Bearer {{doctorToken}}
+
+{
+    "username":"bestDoc2",
+    "password":"123456"
+}
+
+
+### add health
+POST {{base_url}}/health-records
+Authorization: Bearer {{userToken}}
+Content-Type: application/json
+
+{
+  "type": "Blood Pressure",
+  "value": "120/80 mmHg"
+}
