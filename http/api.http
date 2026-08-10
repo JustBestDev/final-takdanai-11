@@ -18,7 +18,7 @@ POST  {{base_url}}/auth/register/user
 Content-Type: application/json
 
 {
-  "username": "user1",
+  "username": "user6",
   "password": "123456"
 }
 
@@ -38,7 +38,7 @@ POST  {{base_url}}/auth/login/user
 Content-Type: application/json
 
 {
-  "username": "user1",
+  "username": "user2",
   "password": "123456"
 }
 
@@ -80,3 +80,26 @@ Content-Type: application/json
   "type": "Blood Pressure",
   "value": "120/80 mmHg"
 }
+
+
+### get health
+GET {{base_url}}/health-records
+Authorization: Bearer {{userToken}}
+
+### get health
+GET {{base_url}}/health-records/7
+Authorization: Bearer {{userToken}}
+
+### put health
+PUT  {{base_url}}/health-records/1
+Authorization: Bearer {{userToken}}
+Content-Type: application/json
+
+{
+  "type": "พอเสียที",
+  "value": "ไม่ไหวแล้ว"
+}
+
+### del health
+DELETE {{base_url}}/health-records/1
+Authorization: Bearer {{userToken}}
